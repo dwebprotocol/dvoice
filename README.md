@@ -1,9 +1,9 @@
-# hyperphone
+# dvoice
 
-A telephone over [Hyperbeam](https://github.com/mafintosh/hyperbeam)
+A telephone over [dCast](https://github.com/hyperbeam)
 
 ```
-npm install -g hyperphone
+npm install -g dvoice
 ```
 
 Needs sox installed.
@@ -25,13 +25,13 @@ sudo apt-get install sox
 On your computer
 
 ```sh
-hyperphone "your name and your friend"
+dvoice "your name and your friend"
 ```
 
 On your friends
 
 ```sh
-hyperphone "your name and your friend"
+dvoice "your name and your friend"
 ```
 
 Now your mic will be streamed to your friends audio and vice versa!
