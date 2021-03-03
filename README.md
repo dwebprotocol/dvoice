@@ -1,6 +1,6 @@
 # dvoice
 
-A telephone over [dCast](https://github.com/hyperbeam)
+A telephone over [dCast](https://github.com/dwebprotocol/dcast)
 
 ```
 npm install -g dvoice
