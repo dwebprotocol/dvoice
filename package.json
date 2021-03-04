@@ -1,22 +1,22 @@
 {
-  "name": "hyperphone",
+  "name": "dvoice",
   "version": "1.0.0",
-  "description": "A telephone over Hyperbeam",
+  "description": "Voice calling over the dWeb",
   "main": "index.js",
   "bin": {
-    "hyperphone": "index.js"
+    "dvoice": "index.js"
   },
   "dependencies": {
-    "hyperbeam": "^1.1.1"
+    "dcast": "^1.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mafintosh/hyperphone.git"
+    "url": "https://github.com/dwebprotocol/dvoice.git"
   },
-  "author": "Mathias Buus (@mafintosh)",
+  "author": "PeepsLabs <peepslabs@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mafintosh/hyperphone/issues"
+    "url": "https://github.com/dwebprotocol/dvoice/issues"
   },
-  "homepage": "https://github.com/mafintosh/hyperphone"
+  "homepage": "https://dwebx.org"
 }
