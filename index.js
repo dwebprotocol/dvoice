@@ -1,26 +1,26 @@
 #!/usr/bin/env node
 
-const Hyperbeam = require('hyperbeam')
+const DCast = require('dcast')
 const { spawn } = require('child_process')
 
 if (process.argv.length < 3) {
-  console.error('Usage: hyperphone <topic>')
+  console.error('Usage: dvoice <topic>')
   process.exit(1)
 }
 
 let record
 let play
 
-const beam = new Hyperbeam('hyperphone ' + process.argv.slice(2).join(' '))
+const beam = new DCast('dvoice ' + process.argv.slice(2).join(' '))
 
 beam.on('remote-address', function ({ host, port }) {
-  if (!host) console.error('[hyperbeam] Could not detect remote address')
-  else console.error('[hyperbeam] Joined the DHT - remote address is ' + host + ':' + port)
-  if (port) console.error('[hyperbeam] Network is holepunchable \\o/')
+  if (!host) console.error('[dcast] Could not detect remote address')
+  else console.error('[dcast] Joined the DHT - remote address is ' + host + ':' + port)
+  if (port) console.error('[dcast] Network is holepunchable \\o/')
 })
 
 beam.on('connected', function () {
-  console.error('[hyperbeam] Success! Encrypted tunnel established to remote peer')
+  console.error('[dcast] Success! Encrypted tunnel established to remote peer')
   record = spawn('sox', ['-q', '--buffer', '512', '-d', '-r', '44100', '-c', '1', '-e', 'signed-integer', '-b', '16', '-t', 'wav', '-'], {
     stdio: ['inherit', 'pipe', 'inherit' ]
   })
@@ -47,7 +47,7 @@ process.once('SIGINT', () => {
 })
 
 function closeASAP () {
-  console.error('[hyperbeam] Shutting down beam...')
+  console.error('[dcast] Shutting down beam...')
 
   const timeout = setTimeout(() => process.exit(1), 2000)
   beam.destroy()
